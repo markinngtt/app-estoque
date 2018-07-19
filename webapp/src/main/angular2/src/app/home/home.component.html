@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col s12 m7">
+    <div class="card">
+      <div>
+          <span>usuario: {{usuario}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar color="primary" >
+  <mat-toolbar-row>
+    <span>Bem vindo: {{usuario}}</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>    
+    <div>
+      <button mat-icon-button [mat-menu-trigger-for]="menuCadastro">
+        <!--mat-icon>more_vert</mat-icon!-->
+        <span>Cadastros</span>      
+      </button>
+    
+      <button mat-icon-button [mat-menu-trigger-for]="menuMovimento">
+          <!--mat-icon>more_vert</mat-icon!-->
+        <span>Movimento</span>
+      </button>
+  </div>
+    
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu x-position="before" #menuCadastro="matMenu">
+  <button mat-menu-item>Usuario</button>
+  <button mat-menu-item>Produto</button>
+</mat-menu>
+
+<mat-menu x-position="before" #menuMovimento="matMenu">
+    <button mat-menu-item>Entrada</button>
+    <button mat-menu-item>Saida</button>
+</mat-menu>
